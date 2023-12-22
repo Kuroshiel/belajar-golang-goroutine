@@ -6,6 +6,8 @@ import (
 	"time"
 )
 
+// Create Goroutine
+
 func RunHelloWorld() {
 	fmt.Println("Hello World")
 }
@@ -16,6 +18,8 @@ func TestCreateGoroutine(t *testing.T) {
 
 	time.Sleep(1 * time.Second)
 }
+
+// Goroutine sangat Ringan
 
 func DisplayNumber(number int) {
 	fmt.Println("Display", number)
