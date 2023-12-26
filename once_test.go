@@ -15,13 +15,13 @@ func OnlyOnce() {
 }
 
 func TestOnce(t *testing.T) {
-	once := sync.Once{}
+	//once := sync.Once{}
 	group := sync.WaitGroup{}
 
 	for i := 0; i < 100; i++ {
+		group.Add(1)
 		go func() {
-			group.Add(1)
-			once.Do(OnlyOnce)
+			OnlyOnce()
 			group.Done()
 		}()
 	}
